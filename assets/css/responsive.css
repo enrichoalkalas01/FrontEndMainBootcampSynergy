@@ -1,0 +1,29 @@
+/* Responsive Ukuran ( 1366 x 720 ) / 992px - 1366px */
+@media screen and ( max-width: 1366px ) and ( min-width: 992px ) {
+    
+}
+
+/* Responsive Ukuran ( 992 ) / 768px - 992px */
+@media screen and ( max-width: 992px ) and ( min-width: 768px ) {
+    
+}
+
+/* Responsive Ukuran ( 768 ) / 575px - 768px */
+@media screen and ( max-width: 768px ) and ( min-width: 575px ) {
+    
+}
+
+/* Responsive Ukuran ( 575 ) / 425px - 575px */
+@media screen and ( max-width: 575px ) and ( min-width: 425px ) {
+    
+}
+
+/* Responsive Ukuran ( 425 ) / 375px - 425px */
+@media screen and ( max-width: 425px ) and ( min-width: 375px ) {
+    
+}
+
+/* Responsive Ukuran ( 375 ) / 320px - 375px */
+@media screen and ( max-width: 375px ) and ( min-width: 320px ) {
+    
+}
