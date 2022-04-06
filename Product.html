@@ -24,34 +24,48 @@
     </div>
 
     <script>
-        let dataProducts = [
-            { name: 'gucci shoes', price: 7500, series: 'shoes' },
-            { name: 'gucci bag', price: 15000, series: 'bag' },
-            { name: 'gucci tie', price: 2500, series: 'tie' }
-        ]
+        // let dataProducts = [
+        //     { name: 'gucci shoes', price: 7500, series: 'shoes' },
+        //     { name: 'gucci bag', price: 15000, series: 'bag' },
+        //     { name: 'gucci tie', price: 2500, series: 'tie' }
+        // ]
 
-        dataProducts.sort((a,b) => {
-            return parseFloat(b.price) - parseFloat(a.price)
-        })
+        // dataProducts.sort((a,b) => {
+        //     return parseFloat(b.price) - parseFloat(a.price)
+        // })
 
-        console.log(dataProducts)
+        // console.log(dataProducts)
 
+        // const BoxProducts = document.getElementById("box-products")
+        // console.log(BoxProducts)
+
+        // for( let i = 0; i < dataProducts.length; i++ ) {
+        //     if ( dataProducts[i].price < 10000 ) {
+        //         BoxProducts.innerHTML += `
+        //             <li class="products">
+        //                 <h1>Name Product : ${ dataProducts[i].name }</h1>
+        //                 <p>Price: ${ dataProducts[i].price }</p>
+        //                 <small>Series: ${ dataProducts[i].series }</small>
+        //             </li>
+        //         `
+        //     }
+        // }
         const BoxProducts = document.getElementById("box-products")
-        console.log(BoxProducts)
-
-        for( let i = 0; i < dataProducts.length; i++ ) {
-            if ( dataProducts[i].price < 10000 ) {
+        fetch('https://my-json-server.typicode.com/typicode/demo/db').then((response) => {
+            return response.json()
+        }).then((result) => {
+            result.comments.forEach(element => {
                 BoxProducts.innerHTML += `
                     <li class="products">
-                        <h1>Name Product : ${ dataProducts[i].name }</h1>
-                        <p>Price: ${ dataProducts[i].price }</p>
-                        <small>Series: ${ dataProducts[i].series }</small>
+                        <h1>Name Product : ${ element.body }</h1>
+                        <p>Id: ${ element.id }</p>
+                        <small>Series: ${ element.postId }</small>
                     </li>
                 `
-            }
-        }
-
-
+            });
+        }).catch((err) => {
+            console.log(err)
+        })
 
         // let ProductsElement = document.querySelectorAll("#box-products .products p")
         // ProductsElement.forEach((element) => {
@@ -60,6 +74,8 @@
         //         console.log(event.target)
         //     })
         // })
+
+        
     </script>
 </body>
 </html>
