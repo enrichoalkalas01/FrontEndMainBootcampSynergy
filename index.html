@@ -89,17 +89,29 @@
     </section>
 
     <script>
-        let data0 = 'asdlas'
-        // let data = `sadasd ${ data0 }`
+        let productPrice = 125000
 
-        console.log(data)
-        /*
-            1 + "sad" + 1 = 1sad1
-            "sad" + 1 + 1 = sad11
-            1 + 1 + "sad" = 2sad
-            null = kosong
-        
-        */
+        function mintaDuitKeOrtu(aksi) {
+            if ( aksi == 'mah / pah, minta duit dong, buat beli baju' ) {
+                return 500000
+            } else {
+                return 'nggk boleh'
+            }
+        }
+
+        class mobil {
+            constructor(name, lvl) {
+                this.name = name
+                this.lvl = lvl
+            }
+        }
+
+        let mobil1 = new mobil
+        let mobil2 = new mobil
+
+        mobil1.name = 'mercedes'
+        mobil2.name = 'audi'
+        mobil2.lvl = 'VVIP'
     </script>
 </body>
 </html>
